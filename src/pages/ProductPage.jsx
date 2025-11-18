@@ -81,7 +81,7 @@ export default function ProductPage() {
 							</button>
 						</div>
 						<div className="product-title">{product.title}</div>
-						<div className="product-price">{product.price}€</div>
+						<div className="product-price">{product.price.toFixed(2)}€</div>
 						{product.rating ? (
 							<div className="product-rating">
 								<span className="product-rating-rate">

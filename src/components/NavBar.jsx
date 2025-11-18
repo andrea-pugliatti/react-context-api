@@ -42,7 +42,7 @@ export default function NavBar() {
 							name="budget"
 							id="budget"
 							type="number"
-							placeholder="Budget"
+							placeholder="Inserisci il budget"
 							value={maxPrice ? maxPrice : ""}
 							onChange={(e) => setMaxPrice(e.target.value)}
 						/>

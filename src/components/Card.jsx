@@ -8,7 +8,7 @@ export default function Card({ product }) {
 					<div className="product-rating">{product.rating.rate}/5 </div>
 					<div>
 						<span>PRICE: </span>
-						<span className="product-price">{product.price}€</span>
+						<span className="product-price">{product.price.toFixed(2)}€</span>
 					</div>
 				</div>
 			</div>
