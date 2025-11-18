@@ -48,6 +48,7 @@ a {
 		text-decoration: underline;
 	}
 }
+
 /* Navbar */
 .navbar ul {
 	list-style: none;
@@ -72,6 +73,23 @@ a {
 
 .navbar a.active {
 	font-weight: 600;
+}
+
+.navbar button {
+	font-size: 0.8rem;
+	padding: 0.4rem 0.9rem;
+	background-color: white;
+	border: 2px dashed black;
+	border-radius: 20px;
+	margin: 0 2rem;
+	& > * {
+		display: block;
+	}
+
+	&:hover {
+		cursor: pointer;
+		border: 2px solid black;
+	}
 }
 
 /* Jumbotron */
