@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductPage from "./pages/ProductPage";
 import ProductsPage from "./pages/ProductsPage";
+
 import DefaultLayout from "./layouts/DefaultLayout";
 
 import BudgetContext from "./contexts/BudgetContext";
