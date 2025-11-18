@@ -12,7 +12,7 @@ export default function ProductsPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [filtered, setFiltered] = useState([]);
 
-	const { budgetMode } = useContext(BudgetContext);
+	const { maxPrice } = useContext(BudgetContext);
 
 	const fetchProducts = () => {
 		fetch(productsEndpoint)
@@ -26,8 +26,8 @@ export default function ProductsPage() {
 	};
 
 	const filterProducts = (products) => {
-		if (budgetMode) {
-			const filtered = products.filter((product) => product.price <= 30);
+		if (maxPrice) {
+			const filtered = products.filter((product) => product.price <= maxPrice);
 			setFiltered(filtered);
 		} else {
 			setFiltered(products);
@@ -38,7 +38,7 @@ export default function ProductsPage() {
 
 	useEffect(() => {
 		filterProducts(products);
-	}, [budgetMode]);
+	}, [maxPrice]);
 
 	return (
 		<main>

@@ -12,10 +12,10 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import BudgetContext from "./contexts/BudgetContext";
 
 function App() {
-	const [budgetMode, setBudgetMode] = useState(false);
+	const [maxPrice, setMaxPrice] = useState(null);
 
 	return (
-		<BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
+		<BudgetContext.Provider value={{ maxPrice, setMaxPrice }}>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<DefaultLayout />}>

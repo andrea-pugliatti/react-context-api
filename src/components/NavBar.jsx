@@ -22,7 +22,7 @@ export default function NavBar() {
 		},
 	];
 
-	const { budgetMode, setBudgetMode } = useContext(BudgetContext);
+	const { maxPrice, setMaxPrice } = useContext(BudgetContext);
 
 	return (
 		<nav className="navbar">
@@ -37,11 +37,15 @@ export default function NavBar() {
 						</li>
 					))}
 					<li>
-						<button type="button" onClick={() => setBudgetMode(!budgetMode)}>
-							{budgetMode
-								? "Disattiva Modalità Budget"
-								: "Attiva Modalità Budget"}
-						</button>
+						<label htmlFor="budget">Budget</label>
+						<input
+							name="budget"
+							id="budget"
+							type="number"
+							placeholder="Budget"
+							value={maxPrice ? maxPrice : ""}
+							onChange={(e) => setMaxPrice(e.target.value)}
+						/>
 					</li>
 				</ul>
 			</div>
